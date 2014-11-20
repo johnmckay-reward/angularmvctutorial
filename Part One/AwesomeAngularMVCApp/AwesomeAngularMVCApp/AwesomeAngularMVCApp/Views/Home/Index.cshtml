@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="AwesomeAngularMVCApp" ng-controller="LandingPageController">
+<head>
+    <title ng-bind="models.helloAngular"></title>
+</head>
+<body>
+    <h1>{{models.helloAngular}}</h1>
+
+    <ul>
+        <li><a href="/#/routeOne">Route One</a></li>
+        <li><a href="/#/routeTwo/6">Route Two</a></li>
+        <li><a href="/#/routeThree">Route Three</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="/#/login">Login</a></li>
+        <li><a href="/#/register">Register</a></li>
+    </ul>
+
+    <div ng-view></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    @Scripts.Render("~/bundles/AwesomeAngularMVCApp")
+</body>
+</html>
