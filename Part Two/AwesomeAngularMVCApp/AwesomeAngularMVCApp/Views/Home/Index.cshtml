@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html ng-app="AwesomeAngularMVCApp" ng-controller="LandingPageController">
+<head>
+    <title ng-bind="models.helloAngular"></title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" ng-click="navbarProperties.isCollapsed = !navbarProperties.isCollapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Awesome Angular MVC APP</a>
+                </div>
+                <div class="navbar-collapse collapse" collapse="navbarProperties.isCollapsed">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="stateOne({ donuts: 12 })">State One</a></li>
+                        <li><a ui-sref="stateTwo">State Two</a></li>
+                        <li><a ui-sref="stateThree({ donuts: 4 })">State Three</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ui-sref="loginRegister">Login / Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mainContent">
+        <div class="row">
+            <div class="col-md-6">
+                <div ui-view="containerOne"></div>
+            </div>
+            <div class="col-md-6">
+                <div ui-view="containerTwo"></div>
+            </div>
+        </div>
+        <div ng-view></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    @Scripts.Render("~/bundles/AwesomeAngularMVCApp")
+</body>
+</html>
