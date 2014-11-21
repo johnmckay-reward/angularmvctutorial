@@ -1,0 +1,17 @@
+<form role="form" ng-submit="register()">
+  <div class="form-group">
+    <label for="emailAddress">Email address</label>
+    <input type="email" class="form-control" id="emailAddress" placeholder="Enter email" ng-model="registerForm.username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" ng-model="registerForm.password">
+  </div>
+  <div class="form-group">
+    <label for="password">Confirm Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Confirm Password" ng-model="registerForm.confirmPassword">
+  </div>
+    <p class="help-block" ng-if="registerForm.errorMessage">{{registerForm.errorMessage}}</p>
+  </div>
+  <button type="submit" class="btn btn-default">Register</button>
+</form>

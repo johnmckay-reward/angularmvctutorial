@@ -1,0 +1,7 @@
+<button ng-click="getValues()">Get Values</button>
+
+<ul class="nav nav-pills" ng-if="values.length > 0">
+	<li ng-repeat="value in values">{{value}}<li>
+</ul>
+
+<p class="help-block" ng-if="error.message">{{error.message}}</p>

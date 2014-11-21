@@ -1,0 +1,12 @@
+<form role="form" ng-submit="login()">
+  <div class="form-group">
+    <label for="emailAddress">Email address</label>
+    <input type="email" class="form-control" id="emailAddress" placeholder="Enter email" ng-model="loginForm.username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" ng-model="loginForm.password">
+  </div>
+    <p class="help-block" ng-if="loginForm.errorMessage">{{loginForm.errorMessage}}</p>
+  <button type="submit" class="btn btn-default">Login</button>
+</form>
